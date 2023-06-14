@@ -18,6 +18,11 @@ In der Bibliothek gibt es eine Klasse namens `TreeList`. Es handelt sich um eine
 
 Erzeugen Sie eine Liste mit 100000 Zufallszahlen. Fügen Sie dann, an zufälligen Stellen, 10000 weitere Zahlen ein. Messen Sie vor und nach dem Einfügen die Zeit und berechnen Sie die Dauer. Machen Sie dieses Experiment mit einer TreeList, einer LinkedList und einer ArrayList.
 
+## Aufgabe 3 (optional, aber eine gute Fingerübung)
+In der letzten Aufgabe haben wir uns ja mit der Ausgabe eines Baumes in der Kommandozeile beschäftigt. Die Ideen dabei möchten wir nun etwas erweitern, und zwar um eine Methode `wsum()` (für "weighted sum") zu implementieren, die -- bei Objekten vom Typ `Tree<Integer>`, also nur bei Bäumen mit Zahlen -- die Summe der Zahlen zurückliefert, wobei jede Zahl mit ihrer Baumtiefe multipliziert wird. Die Zahl des Wurzelknotes wird also mit 0 multipliziert, die Kinder des Wurzelknotens mit 1, die Kindeskinder des Wurzelknotens mit 2, usw.
+
+Übernehmen Sie die Baum-Implementierung aus der letzten Übung und ergänzen Sie die Methode `wsum()`.
+
 ----
 
 Wenn Sie fertig sind, committen Sie alle Ihre Änderungen, und pushen Sie den neuen Branch auf das remote namens `origin` (= GitHub). 
