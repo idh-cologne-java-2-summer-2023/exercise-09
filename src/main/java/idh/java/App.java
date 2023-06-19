@@ -79,9 +79,9 @@ public class App
 
     public static void main( String[] args )
     {
-        // Nutzung eines Seedes um die
-        // ZUfallszahlen möglichst
-        // Deterministisch zu machen.
+        // Nutzung eines Samens um die
+        // Zufallszahlen möglichst
+        // deterministisch zu machen.
         int seed = 1;
         random_tree_list(seed);
         random_linked_list(seed);
