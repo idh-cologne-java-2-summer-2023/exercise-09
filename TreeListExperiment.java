@@ -1,6 +1,9 @@
 import java.util.Random;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
 import com.sun.tools.javac.util.List;
+import org.apache.commons.collections4.list.TreeList;
 
 public class TreeListExperiment {
 	
