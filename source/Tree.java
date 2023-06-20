@@ -41,7 +41,12 @@ public class Tree<T>  {
 		}
 	}
 	
-	public void wsum(int depth){
+	public int wsum() {
+		wsum = 0;
+		return wsum(0);
+	}
+	
+	private int wsum(int depth){
 		System.out.println("Depth: " + depth);
 		wsum += (depth * value);
 			System.out.println("Hold: " + wsum);
@@ -49,6 +54,7 @@ public class Tree<T>  {
 		for(Tree<Integer> child: children) {
 				child.wsum(depth + 1);
 			}
+		return wsum;
 	}
 	
 	
@@ -81,9 +87,9 @@ public class Tree<T>  {
 		book.children().add(words);
 		
 		book.dfs();
-		book.wsum(0);
-		System.out.println("Weighted sum: " + wsum);
 		
+		System.out.println("Weighted sum: " + book.wsum());
+		System.out.println("Weighted sum: " + book.wsum());
 	}
 
 }
