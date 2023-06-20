@@ -31,7 +31,7 @@ public class Main {
         long durationLinkedList = endTimeLinkedList - startTimeLinkedList;
         long durationArrayList = endTimeArrayList - startTimeArrayList;
 
-        System.out.println("Dauer für das Einfügen von " + treeList.size() + " Zahlen:");
+
         System.out.println("TreeList: " + durationTreeList + " ms");
         System.out.println("LinkedList: " + durationLinkedList + " ms");
         System.out.println("ArrayList: " + durationArrayList + " ms");
