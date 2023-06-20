@@ -9,6 +9,7 @@ public class Tree<T>  {
 	int value;
 	Set<Tree<Integer>> children;
 	String space = "";
+	static int wsum;
 	
 	public Tree(int value) {
 		this.value = value;
@@ -40,14 +41,14 @@ public class Tree<T>  {
 		}
 	}
 	
-	public int wsum(int hold, int depth){
+	public void wsum(int depth){
 		System.out.println("Depth: " + depth);
-			hold = hold + (depth * value);
-			System.out.println("Hold: " + hold);
-			for(Tree<Integer> child: children) {
-				child.wsum(hold, depth + 1);
+		wsum += (depth * value);
+			System.out.println("Hold: " + wsum);
+			
+		for(Tree<Integer> child: children) {
+				child.wsum(depth + 1);
 			}
-			return hold;
 	}
 	
 	
@@ -80,7 +81,8 @@ public class Tree<T>  {
 		book.children().add(words);
 		
 		book.dfs();
-		System.out.println("Weighted sum: " + book.wsum(0, 0));
+		book.wsum(0);
+		System.out.println("Weighted sum: " + wsum);
 		
 	}
 
