@@ -1,64 +1,71 @@
 
-import org.apache.commons.collections4.list.TreeList;
+package de.uk.java;
 
-import java.util.ArrayList;
+import org.apache.commons.collections4.list.TreeList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
+import java.util.ArrayList;
 
-public class ZeitBerechnen {
-    public static void main(String[] args) {
-        TreeList<Integer> treeList = new TreeList<>();
-        LinkedList<Integer> linkedList = new LinkedList<>();
-        ArrayList<Integer> arrayList = new ArrayList<>();
+public class Application {
+	
+	
+	public static void main(String[] args) {
+		
+		List<Integer> treeList = new TreeList<Integer>();
+		List<Integer> linkedList = new LinkedList<Integer>();
+		List<Integer> arrList = new ArrayList<Integer>();
+		
+		Random random = new Random();
+		
+		
+		for (int i = 0;i <= 100000; i++) {	
+			treeList.add(random.nextInt());
+			linkedList.add(random.nextInt());
+			arrList.add(random.nextInt());
+		}
+		
+		
+		
+		
+		long startTime = System.currentTimeMillis();
+		
+		for (int i = 0;i <= 10000; i++) {
+			treeList.add(random.nextInt(100000), random.nextInt()); //Zufällige Zahlen an zufälligen Stellen im Index(0-100000)
+		}
+		
+		long endTime = System.currentTimeMillis();
 
-        Random random = new Random();
-        for (int i = 0; i < 100000; i++) {
-            int randomNumber = random.nextInt();
-            treeList.add(randomNumber);
-            linkedList.add(randomNumber);
-            arrayList.add(randomNumber);
-        }
+		System.out.println("The TreeList took " + (endTime - startTime) + " milliseconds");
+		
+		
+		
+		 
+		
+		long startTime2 = System.currentTimeMillis();
+		
+		for (int i = 0;i <= 10000; i++) {
+			linkedList.add(random.nextInt(100000), random.nextInt()); //Zufällige Zahlen an zufälligen Stellen im Index(0-100000)
+		}
+		
+		long endTime2 = System.currentTimeMillis();
 
-        long treeListStartTime = System.nanoTime();
+		System.out.println("The LinkedList took " + (endTime2 - startTime2) + " milliseconds");
+		
+		
+		
+		
+		
+		long startTime3 = System.currentTimeMillis();
+		
+		for (int i = 0;i <= 10000; i++) {
+			arrList.add(random.nextInt(100000), random.nextInt()); //Zufällige Zahlen an zufälligen Stellen im Index(0-100000)
+		}
+		
+		long endTime3 = System.currentTimeMillis();
 
-        for (int i = 0; i < 10000; i++) {
-            int randomNumber = random.nextInt();
-            int randomIndex = random.nextInt(treeList.size());
+		System.out.println("The ArrayList took " + (endTime3 - startTime3) + " milliseconds");
+		
+	}
 
-            treeList.add(randomIndex, randomNumber);
-
-        }
-
-        long treeListEndTime = System.nanoTime();
-        long treeListDuration = treeListEndTime - treeListStartTime;
-
-        long linkedListStartTime = System.nanoTime();
-
-        for (int i = 0; i < 10000; i++) {
-            int randomNumber = random.nextInt();
-            int randomIndex = random.nextInt(linkedList.size());
-
-            linkedList.add(randomIndex, randomNumber);
-        }
-
-        long linkedListEndTime = System.nanoTime();
-        long linkedListDuration = linkedListEndTime - linkedListStartTime;
-
-        long arrayListStartTime = System.nanoTime();
-
-        for (int i = 0; i < 10000; i++) {
-            int randomNumber = random.nextInt();
-            int randomIndex = random.nextInt(arrayList.size());
-
-            arrayList.add(randomIndex, randomNumber);
-        }
-
-        long arrayListEndTime = System.nanoTime();
-        long arrayListDuration = arrayListEndTime - arrayListStartTime;
-
-        System.out.println("TreeList Zeit: " + treeListDuration + " ns");
-        System.out.println("LinkedList Zeit: " + linkedListDuration + " ns");
-        System.out.println("ArrayList Zeit: " + arrayListDuration + " ns");
-    }
 }
