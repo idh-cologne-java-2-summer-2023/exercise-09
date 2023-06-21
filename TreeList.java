@@ -6,7 +6,7 @@ import java.util.Random;
 
 import org.apache.commons.collections4.list.TreeList;
 
-public class Ding {
+public class DatDing {
 	
 	static TreeList<Integer> triLisd = new TreeList<Integer>();
 	static LinkedList<Integer> linkedLisd = new LinkedList<Integer>();
