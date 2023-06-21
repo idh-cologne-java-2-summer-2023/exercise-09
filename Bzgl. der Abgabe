@@ -1,0 +1,6 @@
+Meine fragwürdige Rechtfertigung für das Fehlen von Aufgabe 2:
+Das vorgegebene Projekt zu einem Maven-Projekt umzuwandeln hat (soweit von mir feststellbar) geklappt. 
+So auch das Importieren der Apache-Commons-Bibliothek.
+Allerdings hatte ich Probleme, ein neues Java-Projekt innerhalb des exercise-09 Folders anzulegen.
+Ein vollständig neues Projekt anzulegen ging problemlos, dies kann jedoch nicht ins Kurs-Repository gepushed werden.
+Aufgabe 2 fehlt daher hier.
