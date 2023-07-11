@@ -1,5 +1,5 @@
 
-public class Aufgabe2 {
+public class Exercise2 {
 	import org.apache.commons.collections4.list.TreeList;
 
 	import java.util.ArrayList;
@@ -10,6 +10,11 @@ public class Aufgabe2 {
 	public class ListPerformance {
 	    private static final int INITIAL_SIZE = 100000;
 	    private static final int INSERTIONS = 10000;
+	    
+	    /**
+		 * Hier wird festgelegt, dass eine Liste mit 100000 Zufallszahlen erstellt wird
+		 * und dass random 100000 hinzugefügt werden
+		 */
 
 	    public static void main(String[] args) {
 	        List<Integer> treeList = new TreeList<>();
